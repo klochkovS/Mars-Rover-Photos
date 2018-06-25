@@ -33,7 +33,4 @@ const SearchForm = () => (
   </form>
 );
 
-Object.keys(cameras).map(val => console.log(`${val} - ${cameras[val]}`));
-
 export default SearchForm;
-
