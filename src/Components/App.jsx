@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import SearhForm from './SearchForm';
+import React from 'react';
+import SearchFormContainer from '../Containers/SearchFormContainer';
+import PhotosContainer from '../Containers/PhotosContainer';
 
-const App = ({ isLoading, getPhotos }) => (
+const App = () => (
   <header>
-    <label onClick={getPhotos}>
-      {isLoading ? 'загрузка' : 'не загрузка'}
-    </label>
-
     <h1>Mars Rover Photos</h1>
-    <SearhForm />
+    <SearchFormContainer />
+    <PhotosContainer />
   </header>
 );
 

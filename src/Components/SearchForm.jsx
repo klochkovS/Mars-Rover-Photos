@@ -13,7 +13,7 @@ const cameras = {
   MINITES: 'Miniature Thermal Emission Spectrometer(Mini - TES)',
 };
 
-const SearchForm = () => (
+const SearchForm = ({ isLoading, getPhotos }) => (
   <form>
     <label htmlFor="">Choose a Rover</label>
     <select>
@@ -27,9 +27,10 @@ const SearchForm = () => (
     <label htmlFor="">Choose a camera</label>
     <select>
       {Object.keys(cameras).map(index =>
-        <option value={index}>{cameras[index]}</option>
+        <option key={v4()} value={index}>{cameras[index]}</option>
       )}
     </select>
+    <div onClick={getPhotos}>Поиск</div>
   </form>
 );
 
