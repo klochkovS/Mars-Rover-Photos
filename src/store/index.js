@@ -1,11 +1,13 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import reducers from './reducers';
+import { photos, manifest } from './reducers';
 
 const initialState = {
-  isLoading: false,
+  // isLoading: false,
 };
+
+const reducers = combineReducers({ manifest, photos });
 
 const logger = createLogger();
 

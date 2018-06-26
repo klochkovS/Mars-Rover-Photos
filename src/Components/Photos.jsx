@@ -1,12 +1,12 @@
 import React from 'react';
+import { v4 } from 'uuid';
 
 const Photos = ({ isLoading, photo }) => (
   <section>
-    {console.log(photo && photo.map(val => val.img_src))}
     <label>
       {isLoading ? 'Загрузка...' : ''}
     </label>
-    {photo && photo.map(val => <img src={val.img_src} />)}
+    {photo && photo.map(val => <img key={v4()} src={val.img_src} />)}
   </section>
 
 );

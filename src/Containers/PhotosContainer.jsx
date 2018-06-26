@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import Photos from '../Components/Photos';
 
 const mapStateToProps = state => ({
-  isLoading: state.isLoading,
-  photo: state.photos,
+  isLoading: state.photos.isLoading,
+  photo: state.photos.photos,
 });
 
 const PhotosContainer = connect(
